@@ -914,8 +914,8 @@
      <RmRegistryBranch NAME="RmPreviewDx9Window" API="" XML_VERSION="RenderMonkey 1.71">
       <RmRegistryBranch NAME="EffectPlacementRepository" API="" XML_VERSION="RenderMonkey 1.71">
        <RmRegistryBranch NAME="Effect Workspace.ShadowMapping" API="" XML_VERSION="RenderMonkey 1.71">
-        <RmIntegerVariable NAME="X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0" MIN="-10" MAX="10" CLAMP="FALSE"/>
-        <RmIntegerVariable NAME="Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="831" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="58" MIN="-10" MAX="10" CLAMP="FALSE"/>
         <RmIntegerVariable NAME="Width" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="350" MIN="-10" MAX="10" CLAMP="FALSE"/>
         <RmIntegerVariable NAME="Height" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="350" MIN="-10" MAX="10" CLAMP="FALSE"/>
         <RmIntegerVariable NAME="ShowStatus" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1" MIN="-10" MAX="10" CLAMP="FALSE"/>
@@ -945,11 +945,11 @@
        <RmStringVariable NAME="Editing Shader" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
 Pixel Shader]]></RmTextDataBlock></RmStringVariable>
        <RmStringVariable NAME="Editing Pass" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
-Pass 0]]></RmTextDataBlock></RmStringVariable>
+ApplyShadowTorus]]></RmTextDataBlock></RmStringVariable>
        <RmIntegerVariable NAME="Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0" MIN="-10" MAX="10" CLAMP="FALSE"/>
        <RmIntegerVariable NAME="Width" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="650" MIN="-10" MAX="10" CLAMP="FALSE"/>
        <RmIntegerVariable NAME="Height" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="650" MIN="-10" MAX="10" CLAMP="FALSE"/>
-       <RmIntegerVariable NAME="ShowStatus" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       <RmIntegerVariable NAME="ShowStatus" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="3" MIN="-10" MAX="10" CLAMP="FALSE"/>
        <RmIntegerVariable NAME="Visible" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1" MIN="-10" MAX="10" CLAMP="FALSE"/>
        <RmIntegerVariable NAME="Minimized X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
        <RmIntegerVariable NAME="Minimized Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
@@ -982,10 +982,22 @@ Pass 0]]></RmTextDataBlock></RmStringVariable>
        </RmRegistryBranch>
       </RmRegistryBranch>
      </RmRegistryBranch>
+     <RmRegistryBranch NAME="RmStreamEditor" API="" XML_VERSION="RenderMonkey 1.71">
+      <RmRegistryBranch NAME="Effect Workspace.ShadowMapping.Stream Mapping" API="" XML_VERSION="RenderMonkey 1.71">
+       <RmIntegerVariable NAME="X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="256" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       <RmIntegerVariable NAME="Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="113" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       <RmIntegerVariable NAME="Width" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="641" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       <RmIntegerVariable NAME="Height" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="216" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       <RmIntegerVariable NAME="ShowStatus" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       <RmIntegerVariable NAME="Visible" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       <RmIntegerVariable NAME="Minimized X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       <RmIntegerVariable NAME="Minimized Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+      </RmRegistryBranch>
+     </RmRegistryBranch>
     </RmRegistryBranch>
     <RmRegistryBranch NAME="WORKSPACE" API="" XML_VERSION="RenderMonkey 1.71">
      <RmStringVariable NAME="LAST_SAVE" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
-21/2/2019 21:28:54]]></RmTextDataBlock></RmStringVariable>
+25/2/2019 20:29:58]]></RmTextDataBlock></RmStringVariable>
      <RmStringVariable NAME="VERSION" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
 RenderMonkey Version 1.82 (build 322)]]></RmTextDataBlock></RmStringVariable>
      <RmStringVariable NAME="XML_VERSION" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
@@ -998,11 +1010,12 @@ C:\Users\Chan\Desktop\셰이더공부\랜더몽키\]]></RmTextDataBlock></RmStri
   <RmDirectXEffect NAME="ShadowMapping" API="D3D" ACTIVE_CAMERA="">
    <RmMatrixVariable NAME="gWorldMatrix" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="World" VALUE_0="1.000000" VALUE_1="0.000000" VALUE_2="0.000000" VALUE_3="0.000000" VALUE_4="0.000000" VALUE_5="1.000000" VALUE_6="0.000000" VALUE_7="0.000000" VALUE_8="0.000000" VALUE_9="0.000000" VALUE_10="1.000000" VALUE_11="0.000000" VALUE_12="0.000000" VALUE_13="0.000000" VALUE_14="0.000000" VALUE_15="1.000000"/>
    <RmMatrixVariable NAME="gLightViewMatrix" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE_0="1.000000" VALUE_1="0.000000" VALUE_2="0.000000" VALUE_3="0.000000" VALUE_4="0.000000" VALUE_5="1.000000" VALUE_6="0.000000" VALUE_7="0.000000" VALUE_8="0.000000" VALUE_9="0.000000" VALUE_10="1.000000" VALUE_11="0.000000" VALUE_12="0.000000" VALUE_13="0.000000" VALUE_14="0.000000" VALUE_15="1.000000"/>
-   <RmMatrixVariable NAME="gLightProjectionMatrix" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="Projection" VALUE_0="1.000000" VALUE_1="0.000000" VALUE_2="0.000000" VALUE_3="0.000000" VALUE_4="0.000000" VALUE_5="1.000000" VALUE_6="0.000000" VALUE_7="0.000000" VALUE_8="0.000000" VALUE_9="0.000000" VALUE_10="1.000000" VALUE_11="0.000000" VALUE_12="0.000000" VALUE_13="0.000000" VALUE_14="0.000000" VALUE_15="1.000000"/>
+   <RmMatrixVariable NAME="gLightProjectionMatrix" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="Projection" VALUE_0="2.245950" VALUE_1="0.000000" VALUE_2="0.000000" VALUE_3="0.000000" VALUE_4="0.000000" VALUE_5="2.414214" VALUE_6="0.000000" VALUE_7="0.000000" VALUE_8="0.000000" VALUE_9="0.000000" VALUE_10="1.001001" VALUE_11="-1.001001" VALUE_12="0.000000" VALUE_13="0.000000" VALUE_14="1.000000" VALUE_15="0.000000"/>
    <RmVectorVariable NAME="gWorldLightPosition" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE_0="500.000000" VALUE_1="500.000000" VALUE_2="-500.000000" VALUE_3="1.000000" MIN="-10.000000" MAX="10.000000" CLAMP="FALSE" NORMALIZE="FALSE"/>
    <RmStreamMap NAME="Stream Mapping" API="">
-    <RmStream NAME="Stream" API="" STRIDE="12">
+    <RmStream NAME="Stream" API="" STRIDE="24">
      <RmStreamChannel NAME="Position_0" API="" DATA_SIZE="12" DATA_TYPE="2" REGISTER="0" USAGE="0" USAGE_INDEX="0" ATTRIBUTE_NAME="rm_Vertex"/>
+     <RmStreamChannel NAME="Normal_0" API="" DATA_SIZE="12" DATA_TYPE="2" REGISTER="0" USAGE="3" USAGE_INDEX="0" ATTRIBUTE_NAME="rm_BlendWeight"/>
     </RmStream>
    </RmStreamMap>
    <RmModelData NAME="Model" API="" FILE_NAME="..\..\..\..\..\Program Files (x86)\AMD\RenderMonkey 1.82\Examples\Media\Models\Torus.3ds" ORIENTATION="0"/>
@@ -1012,12 +1025,14 @@ C:\Users\Chan\Desktop\셰이더공부\랜더몽키\]]></RmTextDataBlock></RmStri
 struct VS_INPUT
 {
    float4 mPosition : POSITION;
+   float3 mNormal : NORMAL;
 };
 
 struct VS_OUTPUT
 {
    float4 mPosition : POSITION;
    float4 mClipPosition : TEXCOORD1;
+   float mDiffuse : TEXCOORD2;
 };
 
 float4x4 gWorldMatrix;
@@ -1026,33 +1041,12 @@ float4x4 gLightProjectionMatrix;
 
 float4 gWorldLightPosition;
 
-VS_OUTPUT vs_main(VS_INPUT Input)
-{
-   VS_OUTPUT Output;
-   
-   float4x4 lightViewMatrix = gLightViewMatrix;
-   
-   float3 dirZ = -normalize(gWorldLightPosition.xyz);
-   float3 up = float3(0, 1, 0);
-   float3 dirX = cross(up, dirZ);
-   float3 dirY = cross(dirZ, dirX);
-   
-   lightViewMatrix = float4x4(
-      float4(dirX, -dot(gWorldLightPosition.xyz, dirX)),
-      float4(dirY, -dot(gWorldLightPosition.xyz, dirY)),
-      float4(dirZ, -dot(gWorldLightPosition.xyz, dirZ)),
-      float4(0, 0, 0, 1));
-   lightViewMatrix = transpose(lightViewMatrix);
-   
-   Output.mPosition = mul(Input.mPosition, gWorldMatrix);
-   Output.mPosition = mul(Output.mPosition, lightViewMatrix);
-   Output.mPosition = mul(Output.mPosition, gLightProjectionMatrix);
-   
-   Output.mClipPosition = Output.mPosition;
-   
-   return Output;
-}]]></RmShaderCode>
-     <RmShaderConstant NAME="matViewProjection" API="" REGISTER="0"/>
+float4x4 gViewProjectionMatrix;
+
+]]></RmShaderCode>
+     <RmShaderConstant NAME="gLightProjectionMatrix" API="" REGISTER="4"/>
+     <RmShaderConstant NAME="gWorldLightPosition" API="" REGISTER="8"/>
+     <RmShaderConstant NAME="gWorldMatrix" API="" REGISTER="0"/>
     </RmHLSLShader>
     <RmHLSLShader NAME="Pixel Shader" API="D3D" PIXEL_SHADER="TRUE" TARGET="ps_2_0" ENTRY_POINT="ps_main" COMPILER_FLAGS="0"><RmShaderCode TYPE="TEXT"><![CDATA[
 struct PS_INPUT
@@ -1065,6 +1059,93 @@ float4 ps_main(PS_INPUT Input) : COLOR
    float dpeth = Input.mClipPosition.z / Input.mClipPosition.w;
    return float4(depth.xxx, 1);
 }]]></RmShaderCode></RmHLSLShader>
+    <RmStreamMapReference NAME="Stream Mapping" API=""/>
+   </RmPass>
+   <RmPass NAME="ApplyShadowTorus" API="D3D" PASS_INDEX="1" ENABLED="TRUE">
+    <RmModelReference NAME="Model" API=""/>
+    <RmHLSLShader NAME="Vertex Shader" API="D3D" PIXEL_SHADER="FALSE" TARGET="vs_2_0" ENTRY_POINT="vs_main" COMPILER_FLAGS="0"><RmShaderCode TYPE="TEXT"><![CDATA[
+struct VS_INPUT
+{
+   float4 mPosition : POSITION;
+   float3 mNormal : NORMAL;
+};
+
+struct VS_OUTPUT
+{
+   float4 mPositon : POSITION;
+   float4 mClipPosition : TEXCOORD1;
+   float mDiffuse : TEXCOORD2;
+};
+
+float4x4 gWorldMatrix;
+float4x4 gLightViewMatrix;
+float4x4 gLightProjectionMatrix;
+
+float4 gWorldLightPosition;
+
+float4x4 gViewProjectinoMatrix;
+
+VS_OUTPUT vs_main(VS_INPUT Input)
+{
+   VS_OUTPUT Output;
+   
+   float4x4 lightViewMatrix = gLightViewMatrix;
+   
+   float3 dirZ = -normalize(gWorldLightPosition.xyz);
+   float3 up = float3(0,1,0);
+   float3 dirX = cross(up, dirZ);
+   float3 dirY = cross(dirZ, dirX);
+   
+   lightViewMatirx = float4x4(
+      float4(dirX, -dot(gWorldLightPosition, dirX)),
+      float4(dirY, -dot(gWorldLightPosition, dirY)),
+      float4(dirZ, -dot(gWorldLightPosition, dirZ)),
+      float4(0, 0, 0, 1));
+   lightViewMatrix = transpose(lightViewMatrix);
+   
+   float4 worldPosition = mul(Input.mPosition, gWorldMatrix);
+   Output.mPositon = mul(worldPosition, gViewProjectionMatrix);
+   
+   Output.mClipPosition = mul(worldPosition, lightViewMatrix);
+   Output.mClipPosition = mul(Output.mClipPosition, gLightProjectionMatrix);
+   
+   float3 lightDir = normalize(worldPosition.xyz - gWorldLightPosition.xyz);
+   float3 worldNormal = normalize(mul(Input.mNormal, (float3x3)worldMatrix));
+   Output.mDiffuse = dot(-lightDir, worldNormal);
+   
+   return Output;
+}]]></RmShaderCode>
+     <RmShaderConstant NAME="matViewProjection" API="" REGISTER="0"/>
+    </RmHLSLShader>
+    <RmHLSLShader NAME="Pixel Shader" API="D3D" PIXEL_SHADER="TRUE" TARGET="ps_2_0" ENTRY_POINT="ps_main" COMPILER_FLAGS="0"><RmShaderCode TYPE="TEXT"><![CDATA[
+sampler2D ShadowSampler;
+float4 gObjectColor;
+
+struct PS_INPUT
+{
+   float4 mClipPosition : TEXCOORD1;
+   float mDiffuse : TEXCOORD2;
+};
+
+float4 ps_main(PS_INPUT Input) : COLOR
+{
+   float3 rgb = saturate(Input.mDiffuse) * gObjectColor;
+   
+   float currentDepth = Input.mClipPosition.z / Input.mClipPosition.w;
+   
+   float2 uv = Input.mClipPosition.xy / Input.mClipPosition.w;
+   uv.y = -uv.y;
+   uv = uv * 0.5 + 0.5;
+   
+   float shadowDepth = tex2D(shadowSampler, uv).r;
+   
+   if(currentDepth > shadowDepth + 0.0000125f)
+   {
+      rgb *= 0.5f;
+   } 
+   
+   return(float4(rgb, 1.0f));
+};]]></RmShaderCode></RmHLSLShader>
     <RmStreamMapReference NAME="Stream Mapping" API=""/>
    </RmPass>
   </RmDirectXEffect>
