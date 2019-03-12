@@ -25,11 +25,14 @@ static constexpr float FOV{ PI / 4.0f };							// 시야각
 // 메모리에 저장할 때 사용할 포인터를 2개 선언.
 
 // 모델
-LPD3DXMESH		gpSphere		= NULL;
+LPD3DXMESH		gpSphere			= NULL;
 
 // 셰이더
-LPD3DXEFFECT	gpColorShader	= NULL;
+LPD3DXEFFECT	gpColorShader		= NULL;
+LPD3DXEFFECT	gpTextureMapping	= NULL;
 
+// 텍스처
+LPDIRECT3DTEXTURE9 gpEarthDM		= NULL;
 
 //----------------------------------------------------------------------
 // 전역변수
@@ -322,8 +325,18 @@ bool InitD3D(HWND hWnd)
 bool LoadAssets()
 {
 	// 텍스처 로딩
+	gpEarthDM = LoadTexture("Earth.jpg");
+	if (!gpEarthDM)
+	{
+		return false;
+	}
 
 	// 쉐이더 로딩
+	gpTextureMappingShader = LoadShader("TextureMapping.fx");
+	if (!gpTextureMappingShader)
+	{
+		return false;
+	}
 
 	// 모델 로딩
 
@@ -411,20 +424,17 @@ void Cleanup()
 		gpColorShader = NULL;
 	}
 
+	if (gpTextureMappingShader)
+	{
+		gpTextureMappingShader->Release();
+		gpTextureMappingShader = NULL;
+	}
+
 	// 폰트를 release 한다.
 	if(gpFont)
 	{
 		gpFont->Release();
 		gpFont = NULL;
-	}
-
-	// 모델을 release 한다.
-
-	// 쉐이더를 release 한다.
-	if (gpTextureMappingShader)
-	{
-		gpTextureMappingShader->Release();
-		gpTextureMappingShader = NULL;
 	}
 
 	// 텍스처를 release 한다.
